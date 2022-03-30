@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+.a {
+	margin-left: 30px;
+}
+</style>
+
+
+</head>
+<body>
+	<h2>What Can JavaScript Do?</h2>
+
+	<p>JavaScript can change HTML attribute values.</p>
+
+	<p>In this case JavaScript changes the value of the src (source)
+		attribute of an image.</p>
+
+	<button onclick="document.getElementById('myImage').src='img/a.jpg'">wow</button>
+
+	<img id="myImage" src="img/bb.jpg" style="width: 100px">
+
+	<button onclick="document.getElementById('myImage').src='img/b.jpg'">BigMoney!</button>
+	<br>
+
+	<br>
+
+	<button onclick="on()" class ="a">처음으로</button>
+
+	<button onclick="off()">다른 머니</button>
+	
+	<br>
+	<br>
+	<button onclick="one()"> 토글</button>
+
+	<script>
+		function on() {
+			// var img = document.images[0].src; 
+			document.getElementById('myImage').src = 'img/bb.jpg';
+			console.log("on");
+
+		}
+		function off() {
+			//var img1 = document.images[0].src;
+			document.getElementById('myImage').src = 'img/c.jpg';
+			console.log("off");
+
+		}
+		function one() {
+			//var img1 = document.images[0].src;
+			if(onclick ==1){
+				document.getElementById('myImage').src = 'img/a.jpg';
+				console.log("on");
+			}else{
+				document.getElementById('myImage').src = 'img/b.jpg';
+				console.log("off");
+			}
+			
+
+		}
+	</script>
+
+</body>
+</html>
