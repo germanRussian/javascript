@@ -19,25 +19,52 @@
 
 	<p>In this case JavaScript changes the value of the src (source)
 		attribute of an image.</p>
+		
+		
+<p></p>
+<p></p>
 
-	<button onclick="document.getElementById('myImage').src='img/a.jpg'">wow</button>
+	<div>
+		
+		<img id="myImage" src="img/bb.jpg" style="width: 200px; height:200px">
+<br>
+		<button onclick=wow() class="a">wow</button>
+<br>
+		<button onclick=bigmoney() class="a">BigMoney!</button>
 
-	<img id="myImage" src="img/bb.jpg" style="width: 100px">
+<br>
 
-	<button onclick="document.getElementById('myImage').src='img/b.jpg'">BigMoney!</button>
-	<br>
+		<button onclick="on()" class="a">처음으로</button>
+<br>
 
-	<br>
+		<button onclick="off()" class="a">다른 머니</button>
+<br>
+		
+		<button onclick="one()"
+		style="position: absolute; top: 100px; left: 30px;">토글</button>
+<br>
+	</div>
 
-	<button onclick="on()" class="a">처음으로</button>
+	
 
-	<button onclick="off()">다른 머니</button>
 
-	<br>
-	<br>
-	<button onclick="one()">토글</button>
+
 
 	<script>
+	function wow() {
+		// var img = document.images[0].src; 
+		document.getElementById('myImage').src='img/a.jpg';
+		console.log("wow");
+
+	}
+	
+	function bigmoney() {
+		// var img = document.images[0].src; 
+		document.getElementById('myImage').src='img/b.jpg';
+		console.log("bigmoney");
+
+	}
+	
 		function on() {
 			// var img = document.images[0].src; 
 			document.getElementById('myImage').src = 'img/bb.jpg';
@@ -54,12 +81,20 @@
 			//var img1 = document.images[0].src;
 			if (document.getElementById('myImage').src == 'http://localhost:8080/javascript/img/bb.jpg') {
 				off()
-				console.log("on");
-			} else {
-				on()
 				console.log("off");
+			} else if (document.getElementById('myImage').src == 'http://localhost:8080/javascript/img/a.jpg'){
+				on()
+				console.log("on");
 			}
-
+			else if (document.getElementById('myImage').src == 'http://localhost:8080/javascript/img/b.jpg'){
+				wow()
+				console.log("wow");
+			}
+			else if (document.getElementById('myImage').src == 'http://localhost:8080/javascript/img/c.jpg') {
+				bigmoney()
+				console.log("bigmoney");
+			}
+			
 		}
 	</script>
 
